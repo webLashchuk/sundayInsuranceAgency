@@ -1,0 +1,6 @@
+@use "./mixins/font-face"as *;
+
+@include font-ttf("Satoshi", "../fonts/Satoshi-Light", 300, normal);
+@include font-ttf("Satoshi", "../fonts/Satoshi-Regular", 400, normal);
+@include font-ttf("Satoshi", "../fonts/Satoshi-Medium", 500, normal);
+@include font-ttf("Satoshi", "../fonts/Satoshi-Bold", 700, normal);

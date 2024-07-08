@@ -1,0 +1,26 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.faq {
+  background-color: var(--color-gray-100);
+  width: 100%;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-main);
+    padding: 32px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

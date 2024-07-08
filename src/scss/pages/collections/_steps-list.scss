@@ -1,0 +1,11 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.steps-list {
+  padding-block: 75px 65px;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 95px;
+  }
+}

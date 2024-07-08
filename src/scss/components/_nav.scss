@@ -1,0 +1,96 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.nav {
+  @include flex-v-center;
+  position: relative;
+  color: inherit;
+
+  &__inner {
+    @include flex-all-sb;
+    width: 100%;
+
+    @include media(tablet) {
+      .logo--header {
+        display: none;
+      }
+    }
+
+    .header & {
+      @include media(tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        color: inherit;
+        padding-block: calc(var(--header-height) * 1.2) 20px;
+        width: 100%;
+        height: calc(var(--vh));
+        background-color: var(--color-white);
+        transform: translateX(150%);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-v-center;
+    margin-inline: rem(70) auto;
+    gap: 35px;
+
+    @include media(tablet) {
+      gap: 20px;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+
+      @include media(tablet) {
+        margin-right: 0;
+        gap: 15px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: transparent;
+
+    @include media(tablet) {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+
+  .true {
+    font-weight: var(--fw-600);
+  }
+
+  &__btns {
+    @include flex-v-center;
+    justify-self: flex-end;
+    gap: 10px;
+
+    @include media(tablet) {
+      margin: 0 auto;
+    }
+
+    @include media(mobile-m) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    ul {
+      display: flex;
+      gap: rem(50);
+    }
+  }
+}

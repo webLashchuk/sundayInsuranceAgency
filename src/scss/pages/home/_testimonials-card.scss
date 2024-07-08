@@ -1,0 +1,51 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.testimonials-card {
+  display: flex;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--color-white);
+  border-radius: var(--radius-main);
+  gap: 40px;
+  padding: 30px 40px;
+
+  @include media(mobile-l) {
+    gap: 20px;
+    padding: 15px 20px;
+  }
+
+  img {
+    max-width: 120px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: calc(var(--radius-main) * 10);
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    max-width: 345px;
+    width: 100%;
+
+    @include media(mobile-l) {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    line-height: 1.45;
+    color: var(--color-brown-900);
+  }
+
+  object {
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+    line-height: 1.6;
+    white-space: nowrap;
+    color: var(--color-brown-500);
+    margin: 0 auto;
+  }
+}

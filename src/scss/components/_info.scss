@@ -1,0 +1,61 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.info {
+
+  .post__image {
+    max-width: 420px;
+
+    @include media(mobile-l) {
+      max-width: 100%;
+    }
+  }
+
+  img {
+    aspect-ratio: 1/1;
+
+    @include media(mobile-l) {
+      aspect-ratio: 16/8;
+    }
+  }
+
+  h2 {
+    line-height: 1.35;
+    margin-bottom: 20;
+
+    +p {
+      margin: 0;
+    }
+  }
+
+  p {
+    line-height: 1.3;
+  }
+
+  .post__content {
+    max-width: 420px;
+
+    @include media(mobile-l) {
+      max-width: 100%;
+    }
+  }
+
+  &--wildlife {
+
+    .post__image {
+      max-width: 315px;
+
+      @include media(mobile-l) {
+        max-width: 100%;
+      }
+    }
+
+    .post__content {
+      max-width: 420px;
+
+      @include media(mobile-l) {
+        max-width: 100%;
+      }
+    }
+  }
+}
