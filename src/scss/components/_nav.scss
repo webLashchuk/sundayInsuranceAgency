@@ -71,13 +71,13 @@
   }
 
   .true {
-    font-weight: var(--fw-600);
+    border-bottom: 1px solid var(--color-gray-500);
   }
 
   &__btns {
     @include flex-v-center;
     justify-self: flex-end;
-    gap: 10px;
+    gap: rem(50);
 
     @include media(tablet) {
       margin: 0 auto;
@@ -91,6 +91,11 @@
     ul {
       display: flex;
       gap: rem(50);
+    }
+
+    li:not(:last-child) {
+      padding-right: rem(50);
+      border-right: 1px solid rgba(255, 255, 255, .16);
     }
   }
 }

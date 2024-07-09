@@ -34,7 +34,7 @@ body {
   width: 100%;
 
   &--wide {
-    max-width: var(--container-width-wide);
+    max-width: var(--content-width-wide);
   }
 }
 
@@ -82,7 +82,7 @@ img {
   transition-duration: .3s;
   transition-timing-function: linear;
 
-  &:hover {
+  &:hover:not(.true) {
     color: var(--color-gray-500);
 
     @include media(tablet) {

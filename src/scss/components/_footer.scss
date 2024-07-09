@@ -2,50 +2,56 @@
 @use "../utils/mixins/"as*;
 
 .footer {
-  font-size: 20px;
-  background-color: var(--color-brown-200);
-
-  .nav {
-    @include flex-sb;
-    align-items: flex-end;
-
-    @include media(mobile-l) {
-      flex-direction: column
-    }
-
-    &__inner {
-      @include flex-col;
-      align-items: flex-start;
-
-      @include media(mobile-l) {
-        align-items: center;
-        margin-bottom: 30px;
-      }
-
-      a:first-of-type {
-        margin-bottom: 25px;
-        line-height: 1;
-        font-size: 20px;
-
-        @include media(tablet) {
-          margin-bottom: 35px;
-          font-size: 16px;
-        }
-      }
-    }
+  &__wrapper {
+    background-color: var(--color-dark-800);
+    border-radius: var(--radius-main);
+    padding-inline: rem(25);
   }
 
-  .logo {
-    max-width: 560px;
-
-    @include media(tablet) {
-      max-width: 360px;
+  &__inner {
+    h2 {
+      color: var(--color-white);
+      font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 2.62rem);
+      text-transform: capitalize;
+      margin-bottom: rem(50);
     }
   }
 
   &__top {
-    border-bottom: 1px solid var(--color-brown-300);
-    padding-block: 45px;
+    @include flex-sb;
+    align-items: flex-start;
+    min-height: 375px;
+    border-bottom: 1px solid var(--color-dark-500);
+    padding: rem(45);
+  }
+
+  label {
+    display: inline-block;
+    max-width: 340px;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    background-color: var(--color-dark-500);
+    color: var(--color-white);
+    border-radius: calc(var(--radius-main) - 12px);
+    padding-block: 10px;
+    font-size: 16px;
+    padding-left: rem(32);
+    margin-bottom: 15px;
+
+    &::placeholder {
+      font-weight: var(--fw-500);
+      color: var(--color-gray-400);
+      line-height: 1;
+    }
+  }
+
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px rem(70);
   }
 
   &__bottom,
@@ -54,19 +60,10 @@
   }
 
   &__bottom {
-    padding-block: 20px;
+    padding: rem(25) rem(45);
 
     @include media(mobile-l) {
       flex-direction: column-reverse;
-    }
-
-    p,
-    a {
-      font-size: 16px;
-    }
-
-    p {
-      color: var(--color-brown-900);
     }
   }
 
@@ -80,14 +77,15 @@
   }
 
   &__item {
-    font-weight: var(--fw-600);
-
     &:not(:last-child) {
-      margin-right: 48px;
+      margin-right: rem(30);
     }
   }
 
   .copyright {
+    font-size: clamp(16px, 1vw, 18px);
+    font-weight: var(--fw-400);
+
     @include media(mobile-l) {
       text-align: center;
     }
@@ -95,18 +93,6 @@
     @include media(mobile-s) {
       max-width: 250px;
       font-size: 14px;
-    }
-  }
-
-  .btn--user {
-    background-color: var(--color-brown-300) !important;
-
-    &:hover {
-      background-color: transparent !important;
-
-      @include media(tablet) {
-        background-color: var(--color-brown-300) !important;
-      }
     }
   }
 }
