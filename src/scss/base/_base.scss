@@ -33,8 +33,11 @@ body {
   max-width: var(--container-width);
   width: 100%;
 
-  &--wide {
-    max-width: var(--content-width-wide);
+  &--borders {
+    max-width: 1390px;
+    padding: rem(65) rem(40);
+    border-left: 1px solid var(--color-dark-500);
+    border-right: 1px solid var(--color-dark-500);
   }
 }
 
@@ -73,6 +76,16 @@ img {
 
 .section {
   padding-block: rem(64);
+
+  &--light {
+    background-color: var(--color-white);
+
+    h2 {
+      +p {
+        color: var(--color-dark-900);
+      }
+    }
+  }
 }
 
 .link {

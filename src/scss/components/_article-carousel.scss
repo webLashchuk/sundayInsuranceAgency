@@ -1,0 +1,68 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.article-carousel {
+  overflow: hidden;
+
+  &--light {
+    background-color: var(--color-white);
+  }
+
+  h2 {
+    margin-bottom: 12px;
+
+    +p {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__item {
+    flex: 0 0 180px;
+    transition-property: flex, transform;
+    transition-duration: .6s;
+    transition-timing-function: cubic-bezier(0.28, -0.03, 0, 0.99);
+
+    &.inactive-left,
+    &.inactive-right {
+      flex: 0 0 180px;
+      transform: translateX(0);
+    }
+  }
+
+  &__item.active {
+    flex: 1;
+    transform: translateX(0);
+
+    article {
+      max-width: 100%;
+      transition-duration: .6s;
+      transition-timing-function: cubic-bezier(.28, -0.03, 0, .99);
+      overflow: hidden;
+    }
+
+    .carousel-card__image {
+      &::before {
+        backdrop-filter: none;
+        background-color: transparent;
+      }
+    }
+
+    h3 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

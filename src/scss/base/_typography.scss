@@ -4,7 +4,6 @@
 h1,
 h2,
 h3 {
-  overflow: hidden;
   width: fit-content;
   text-transform: capitalize;
   font-weight: var(--fw-500);
@@ -22,6 +21,7 @@ h2 {
   margin-bottom: 15px;
 
   +p {
+    color: var(--color-white);
     font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 3rem);
   }
 }

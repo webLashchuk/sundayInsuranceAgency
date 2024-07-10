@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Education"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "education", "class": ""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "class": "hero--education"
+        }
+      </include>
+
+      <include src="./html/education/_articles.html">
+        {
+        "class":"",
+        "title":"Insurance Tips",
+        "link":"#",
+        "linkFirst":"understanding-your-policy.html",
+        "titleFirst": "How to Choose the Right Insurance",
+        "imgFirst": "right-insurance.jpg",
+        "linkSecond":"understanding-your-policy.html",
+        "titleSecond": "Common Insurance Mistakes",
+        "imgSecond": "insurance-mistakes.jpg"
+        }
+      </include>
+
+      <include src="./html/education/_articles.html">
+        {
+        "class":"articles--reverse",
+        "title":"Detailed Guides",
+        "link":"#",
+        "linkFirst":"understanding-your-policy.html",
+        "titleFirst": "Understanding Your Policy",
+        "imgFirst": "understanding-your-policy.jpg",
+        "linkSecond":"understanding-your-policy.html",
+        "titleSecond": "The Claims Process Explained",
+        "imgSecond": "process-explained.jpg"
+        }
+      </include>
+
+      <include src="./html/education/_articles.html">
+        {
+        "class":"",
+        "title":"Insurance Basics",
+        "link":"#",
+        "linkFirst":"understanding-your-policy.html",
+        "titleFirst": "What is Insurance?",
+        "imgFirst": "what-is-insurance.jpg",
+        "linkSecond":"understanding-your-policy.html",
+        "titleSecond": "How Insurance Works",
+        "imgSecond": "insurance-works.jpg"
+        }
+      </include>
+
+      <include src="./html/_articles-carousel.html">
+        {
+        "class":"",
+        "title":"insights",
+        "subTitle":"Trending Insurance News"
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>
