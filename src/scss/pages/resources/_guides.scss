@@ -1,0 +1,36 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.guides {
+
+  article {
+    border-radius: var(--radius-main);
+    color: var(--color-white);
+    padding: rem(135) rem(50) rem(50);
+
+    &::before {
+      @include pseudo;
+      top: 48px;
+      left: 48px;
+      width: 65px;
+      height: 65px;
+      background-image: var(--arrow);
+      @include cover-background;
+    }
+  }
+
+  h3 {
+    font-size: clamp(1.75rem, 1.25rem + 2.2857vw, 56px);
+    margin-bottom: 25px;
+  }
+
+  span {
+    opacity: .7;
+  }
+
+  .grid__item:first-child {
+    article {
+      background: var(--gradient-violet-blue);
+    }
+  }
+}

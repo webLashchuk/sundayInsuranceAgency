@@ -2,7 +2,6 @@
 @use "../../utils/mixins/"as*;
 
 .articles {
-
   &__header {
     @include flex-all-sb;
     margin-bottom: rem(65);
@@ -17,6 +16,8 @@
   }
 
   article {
+    max-width: 650px;
+    width: 100%;
     border-radius: var(--radius-main);
     padding: 16px;
 

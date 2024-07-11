@@ -1,0 +1,27 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.section-header {
+  margin-bottom: rem(65);
+  @include flex-col;
+  gap: 15px;
+
+  &--centered {
+    align-items: center;
+  }
+
+  p {
+    color: var(--color-white);
+    font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 3rem);
+    line-height: 1;
+  }
+
+
+  @include media(mobile-l) {
+    margin-bottom: rem(35);
+  }
+
+  @include media(mobile-m) {
+    margin-bottom: rem(25);
+  }
+}

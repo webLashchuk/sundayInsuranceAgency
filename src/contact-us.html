@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Contact Us"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "contact-us", "class": ""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "class": "hero--education"
+        }
+      </include>
+
+      <include src="./html/_faq.html">
+        {
+        "subTitle": "5 More FAQ About Insurance",
+        "titleFirst": "What is an insurance premium?",
+        "textFirst": "An insurance premium is the amount you pay to your insurance company for your policy. Premiums can
+        be paid monthly, quarterly, or annually, depending on the terms of your policy and your agreement with the
+        insurer.",
+        "titleSecond": "What is a coverage limit?",
+        "textSecond": "A coverage limit is the maximum amount an insurance company will pay for a covered loss under
+        your policy. Different types of coverage within a policy may have different limits.",
+        "titleThird": "How does a deductible work?",
+        "textThird": "A deductible is the amount you must pay out-of-pocket before your insurance coverage kicks in. For
+        example, if you have a $500 deductible and incur a $2,000 claim, you will pay the first $500, and your insurer
+        will cover the remaining $1,500.",
+        "titleFourth": "What is a rider in insurance?",
+        "textFourth": "A rider is an additional provision or amendment to an insurance policy that adds, modifies, or
+        removes coverage. Riders allow you to customize your policy to better fit your specific needs.",
+        "titleFifth": "How does insurance underwriting work?",
+        "textFifth": "Insurance underwriting is the process by which an insurer evaluates the risk of insuring a person
+        or entity and determines the terms of the insurance policy, including the premium. Underwriters assess factors
+        such as age, health, occupation, and lifestyle to determine the level of risk."
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>

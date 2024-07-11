@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Resources"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "resources", "class": ""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "class": "hero--education"
+        }
+      </include>
+
+      <include src="./html/resources/_guides.html"></include>
+
+      <include src="./html/resources/_webinars.html"></include>
+
+      <include src="./html/_faq.html">
+        {
+        "subTitle": "5 More FAQ About Insurance",
+        "titleFirst": "How often should I review my insurance policy?",
+        "textFirst": "It's advisable to review your insurance policy annually or whenever you experience a significant
+        life event, such as buying a new home, getting married, or having a child. Regular reviews ensure your coverage
+        remains adequate and up-to-date.",
+        "titleSecond": "What is the difference between term and whole life insurance?",
+        "textSecond": "Term life insurance provides coverage for a specified period, typically 10, 20, or 30 years, and
+        pays a benefit only if the insured dies during that term. Whole life insurance, on the other hand, offers
+        lifelong coverage and includes a savings component that can accumulate cash value over time.",
+        "titleThird": "Can I have multiple insurance policies?",
+        "textThird": "Yes, you can have multiple insurance policies. Many people carry several types of insurance (e.g.,
+        health, auto, home, life) to cover different aspects of their lives. It's important to ensure that your coverage
+        is coordinated to avoid gaps or overlaps.",
+        "titleFourth": "What is a policy exclusion?",
+        "textFourth": "A policy exclusion is a provision within an insurance policy that eliminates coverage for certain
+        risks, events, or conditions. Understanding exclusions is crucial, as it helps you know what is not covered by
+        your policy and allows you to plan accordingly.",
+        "titleFifth": "How does a no-claims bonus work?",
+        "textFifth": "A no-claims bonus is a discount offered by insurers to policyholders who have not made any claims
+        during a specified period, usually a year. This bonus can significantly reduce your premium, rewarding you for
+        being a low-risk customer."
+        }
+      </include>
+
+      <include src="./html/_blog.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>

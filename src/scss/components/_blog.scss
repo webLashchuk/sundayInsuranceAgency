@@ -1,0 +1,36 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.blog {
+  &__header {
+    @include flex-sb;
+    align-items: flex-end;
+    margin-bottom: rem(65);
+  }
+
+  .section-header {
+    margin-bottom: 0;
+  }
+
+  article {
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-600);
+    border-radius: var(--radius-main);
+    padding: 16px 16px 24px 16px;
+  }
+
+  img {
+    max-width: 390px;
+    width: 100%;
+    aspect-ratio: 29/25;
+    border-radius: calc(var(--radius-main) - 8px);
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    color: var(--color-white);
+    font-size: clamp(1.25rem, 2vw, 28px);
+  }
+}

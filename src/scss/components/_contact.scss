@@ -22,10 +22,13 @@
     z-index: 1;
   }
 
+  .section-header {
+    margin-bottom: rem(50);
+  }
+
   p {
     text-align: center;
     line-height: 1.2;
-    margin-bottom: rem(50);
     color: white;
   }
 

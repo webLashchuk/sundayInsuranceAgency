@@ -12,7 +12,13 @@
 
   &[data-items="1"] {
     --column: 2;
-    gap: 25px;
+    gap: rem(25);
+    grid-template-columns: repeat(var(--column), 1fr);
+  }
+
+  &[data-items="2"] {
+    --column: 3;
+    gap: rem(25);
     grid-template-columns: repeat(var(--column), 1fr);
   }
 }

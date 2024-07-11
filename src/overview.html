@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Overview"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "overview", "class": ""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "class": "hero--education"
+        }
+      </include>
+
+      <include src="./html/_faq.html">
+        {
+        "subTitle": "Questions? We’re glad you asked.",
+        "titleFirst": "What is the purpose of insurance?",
+        "textFirst": "Insurance provides financial protection against unexpected events or losses. It helps individuals
+        and businesses manage risks by transferring the financial burden to the insurance company in exchange for
+        regular premium payments",
+        "titleSecond": "How do I choose the right insurance policy?",
+        "textSecond": "Choosing the right insurance policy involves assessing your specific needs, comparing quotes from
+        different providers, and reading customer reviews. It’s important to understand the terms, coverage options, and
+        any exclusions in the policy.",
+        "titleThird": "What factors affect my insurance premium?",
+        "textThird": "Several factors can influence your insurance premium, including your age, health, driving record,
+        location, and the type and amount of coverage you choose. Each type of insurance has its own set of variables
+        that affect premiums.",
+        "titleFourth": "How do I file an insurance claim?",
+        "textFourth": "To file an insurance claim, contact your insurance provider as soon as possible after the
+        incident. Provide all necessary documentation, such as police reports, medical records, or repair estimates.
+        Your insurer will guide you through the process and help you get the compensation you are entitled to.",
+        "titleFifth": "What is a deductible?",
+        "textFifth": "A deductible is the amount you pay out-of-pocket before your insurance coverage kicks in. For
+        example, if you have a $500 deductible and a claim for $2,000, you will pay the first $500, and your insurance
+        will cover the remaining $1,500. Higher deductibles usually mean lower premiums, and vice versa."
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>

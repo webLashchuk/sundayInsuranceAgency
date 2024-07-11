@@ -8,14 +8,6 @@
     background-color: var(--color-white);
   }
 
-  h2 {
-    margin-bottom: 12px;
-
-    +p {
-      margin-bottom: 60px;
-    }
-  }
-
   &__list {
     width: 100%;
     align-items: flex-start;
@@ -52,6 +44,7 @@
       &::before {
         backdrop-filter: none;
         background-color: transparent;
+        background: var(--gradient-black-carousel);
       }
     }
 
