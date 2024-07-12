@@ -15,22 +15,36 @@
       width: 65px;
       height: 65px;
       background-image: var(--arrow);
+      filter: var(--filter-white);
       @include cover-background;
     }
   }
 
+  .list {
+    margin-bottom: rem(45);
+  }
+
   h3 {
+    max-width: 490px;
     font-size: clamp(1.75rem, 1.25rem + 2.2857vw, 56px);
     margin-bottom: 25px;
   }
 
   span {
+    display: inline-block;
     opacity: .7;
+    margin-bottom: rem(95);
   }
 
   .grid__item:first-child {
     article {
       background: var(--gradient-violet-blue);
+    }
+  }
+
+  .grid__item:last-child {
+    article {
+      background: var(--gradient-coral-pink);
     }
   }
 }

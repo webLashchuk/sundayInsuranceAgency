@@ -1,0 +1,14 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.hero-slider {
+  max-width: 1440px;
+  width: 100%;
+  margin-bottom: rem(65);
+
+  img {
+    max-width: 595px;
+    width: 100%;
+    aspect-ratio: 7/4;
+  }
+}

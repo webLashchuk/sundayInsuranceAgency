@@ -21,4 +21,63 @@
     gap: rem(25);
     grid-template-columns: repeat(var(--column), 1fr);
   }
+
+  &[data-items="3"] {
+    --column: 3;
+    justify-items: center;
+    width: 100%;
+    gap: rem(25);
+    grid-template-columns: repeat(var(--column), 1fr);
+
+    .grid__item {
+      padding-left: 70px;
+
+      &::before,
+      &::after {
+        @include pseudo;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        border-radius: calc(var(--radius-main)/2);
+        left: 0;
+        background-color: var(--color-dark-800);
+      }
+
+      &::after {
+        width: 25px;
+        height: 25px;
+        left: 12px;
+        @include cover-background;
+        filter: var(--filter-gray-700);
+      }
+
+      &--secure {
+        &::after {
+          background-image: var(--secure);
+        }
+      }
+
+      &--claims {
+        &::after {
+          background-image: var(--lotus);
+        }
+      }
+
+      &--coverage {
+        &::after {
+          background-image: var(--hand-coins);
+        }
+      }
+    }
+  }
+
+  &[data-items="4"] {
+    --column: 4;
+    gap: rem(15);
+    grid-template-columns: repeat(var(--column), 1fr);
+  }
 }

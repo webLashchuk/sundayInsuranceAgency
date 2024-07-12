@@ -1,0 +1,61 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.case {
+  &__header {
+    @include flex-all-sb;
+    margin-bottom: rem(65);
+  }
+
+  h2 {
+    color: var(--color-white);
+    font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 3.5rem);
+    text-transform: capitalize;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  article {
+    border-radius: var(--radius-main);
+    background-color: var(--color-dark-800);
+    padding: 16px;
+
+    div {
+      position: relative;
+      padding-bottom: 110px;
+
+      &::before {
+        @include pseudo;
+        bottom: rem(45);
+        left: 0;
+        width: 64px;
+        height: 64px;
+        background-image: var(--arrow);
+        filter: var(--filter-white);
+      }
+    }
+  }
+
+  a {
+    @include flex-h-center;
+    gap: 65px;
+  }
+
+  h3 {
+    font-size: clamp(1.75rem, 1.25rem + 2.2857vw, 56px);
+    padding-top: rem(30);
+    color: var(--color-white);
+    margin-bottom: rem(35);
+  }
+
+  img {
+    aspect-ratio: 131/100;
+    border-radius: calc(var(--radius-main) - 8px);
+  }
+
+  p {
+    font-size: clamp(1.35rem, 2vw, 32px);
+    color: var(--color-gray-500);
+    line-height: 1;
+  }
+}
