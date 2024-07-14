@@ -9,6 +9,7 @@
 
   h2 {
     color: var(--color-white);
+    font-family: var(--font-family-primary);
     font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 3.5rem);
     text-transform: capitalize;
     line-height: 1;

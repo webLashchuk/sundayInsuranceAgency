@@ -80,4 +80,10 @@
     gap: rem(15);
     grid-template-columns: repeat(var(--column), 1fr);
   }
+
+  &[data-items="5"] {
+    --column: 4;
+    gap: rem(25);
+    grid-template-columns: repeat(var(--column), 1fr);
+  }
 }

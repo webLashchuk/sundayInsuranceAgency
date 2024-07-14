@@ -1,0 +1,56 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.tools {
+  .grid__item {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-blue-500);
+    min-height: 415px;
+    aspect-ratio: 37/50;
+    border-radius: var(--radius-main);
+    padding: 25px;
+
+    &::before {
+      @include pseudo;
+      @include contain-background;
+      max-width: 350px;
+      width: 100%;
+      height: 350px;
+      bottom: -70px;
+      right: -70px;
+      opacity: .8;
+      filter: var(--filter-blue-900);
+    }
+
+    &--calculators {
+      &::before {
+        background-image: var(--calculator-big);
+      }
+    }
+
+    &--guides {
+      &::before {
+        background-image: var(--text-big);
+      }
+    }
+
+    &--webinars {
+      &::before {
+        background-image: var(--tv-big);
+      }
+    }
+
+    &--workshops {
+      &::before {
+        background-image: var(--workshop-big);
+      }
+    }
+  }
+
+  h3 {
+    font-size: clamp(20px, 2vw, 28px);
+    color: var(--color-blue-900);
+    opacity: .8;
+  }
+}

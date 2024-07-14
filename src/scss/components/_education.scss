@@ -1,0 +1,44 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.education {
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 425px;
+    width: 100%;
+    border-left: 1px solid var(--color-gray-300);
+    padding: 15px 20px;
+
+    p {
+      font-size: clamp(18px, 2vw, 20px);
+      color: var(--color-black);
+      line-height: 1.2;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: var(--font-family-secondary);
+    margin-bottom: rem(55);
+  }
+
+  .btn {
+    margin-left: auto;
+    aspect-ratio: 297/100;
+  }
+
+  img {
+    border-radius: var(--radius-main);
+  }
+}

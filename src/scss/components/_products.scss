@@ -1,11 +1,10 @@
 @use "../utils/functions/"as*;
 @use "../utils/mixins/"as*;
 
-.article-carousel {
-  overflow: hidden;
-
-  &--light {
-    background-color: var(--color-white);
+.products {
+  &__wrapper {
+    @include flex-col;
+    gap: 25px;
   }
 
   &__list {
@@ -16,14 +15,15 @@
   }
 
   &__item {
-    flex: 0 0 180px;
+    height: 100%;
+    flex: 0 0 475px;
     transition-property: flex, transform;
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0.28, -0.03, 0, 0.99);
 
     &.inactive-left,
     &.inactive-right {
-      flex: 0 0 180px;
+      flex: 0 0 475px;
       transform: translateX(0);
     }
   }
@@ -31,30 +31,34 @@
   &__item.active {
     flex: 1;
     transform: translateX(0);
+    height: auto;
 
-    article {
+    .product-card {
       max-width: 100%;
       transition-duration: .6s;
       transition-timing-function: cubic-bezier(.28, -0.03, 0, .99);
       overflow: hidden;
-    }
+      padding: rem(135) rem(280) rem(45) rem(45);
 
-    .carousel-card__image {
-      &::before {
-        backdrop-filter: none;
-        background-color: transparent;
-        background: var(--gradient-black-carousel);
+      p {
+        max-width: 485px;
+        margin-top: 0;
       }
     }
 
-    h3 {
-      opacity: 1;
-      transform: translateY(0);
+    .product-card__images {
+      max-width: 340px;
     }
 
-    footer {
-      transform: translateY(0);
-      opacity: 1;
+    .product-card__customers {
+      transform: translateX(0) scale(1);
+    }
+
+    .list {
+      margin-top: auto;
+      transform: translateX(0);
+      height: fit-content;
+      transition: all .3s;
     }
   }
 }

@@ -1,0 +1,35 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.offers {
+  display: flex;
+  gap: 25px;
+
+  article {
+    position: relative;
+  }
+
+  img {
+    max-width: 420px;
+    aspect-ratio: 21/25;
+    border-radius: calc(var(--radius-main) - 8px);
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border-radius: calc(var(--radius-main) * 2);
+    color: var(--color-white);
+    background-color: rgba($color: #fff, $alpha: .5);
+    padding: rem(14) rem(32);
+    backdrop-filter: blur(5px);
+  }
+
+  p {
+    color: var(--color-black);
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.2;
+  }
+}

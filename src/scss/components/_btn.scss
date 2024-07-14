@@ -18,7 +18,7 @@
   text-align: center;
   text-transform: capitalize;
   padding: 14px 32px;
-  transition-property: background-color, color, border-color;
+  transition-property: background-color, color, border-color, opacity;
   transition-duration: 0.3s;
 
   &--order {
@@ -45,6 +45,20 @@
     @include media(tablet) {
       background-color: var(--color-white) !important;
       color: var(--color-black) !important;
+    }
+  }
+
+  &--black {
+    background-color: var(--color-black);
+
+    &:hover {
+      background-color: var(--color-gray-500);
+      color: var(--color-gray-300) !important;
+
+      @include media(tablet) {
+        background-color: var(--color-black);
+        color: var(--color-white) !important;
+      }
     }
   }
 }
