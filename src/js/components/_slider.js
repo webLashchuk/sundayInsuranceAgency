@@ -7,8 +7,12 @@ const swiperHero = new Swiper('.hero-slider', {
   draggable: true,
   grabCursor: true,
   breakpoints: {
-    320: {},
-    768: {},
+    320: {
+      slidesPerView: 1.35,
+    },
+    568: {
+      slidesPerView: 2.35,
+    },
     991: {},
   },
 });

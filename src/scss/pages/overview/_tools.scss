@@ -11,6 +11,14 @@
     border-radius: var(--radius-main);
     padding: 25px;
 
+    @include media(tablet-wide) {
+      min-height: 315px;
+    }
+
+    @include media(tablet) {
+      min-height: 215px;
+    }
+
     &::before {
       @include pseudo;
       @include contain-background;
@@ -21,6 +29,20 @@
       right: -70px;
       opacity: .8;
       filter: var(--filter-blue-900);
+
+      @include media(tablet) {
+        bottom: -100px;
+      }
+
+      @include media(mobile-l) {
+        bottom: -130px;
+        right: -30px;
+      }
+
+      @include media(mobile-m) {
+        bottom: -100px;
+        right: -50px;
+      }
     }
 
     &--calculators {

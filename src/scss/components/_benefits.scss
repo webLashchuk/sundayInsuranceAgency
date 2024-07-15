@@ -5,7 +5,11 @@
   .grid__item {
     @include flex-col;
     border-left: 1px solid rgba($color: #000000, $alpha: .16);
-    padding: rem(175) rem(20) rem(25) rem(20);
+    padding: rem(155) rem(20) rem(15) rem(15);
+
+    @include media(tablet) {
+      padding: rem(105) rem(10) rem(10);
+    }
 
     &::before,
     &::after {
@@ -32,10 +36,10 @@
     }
 
     p {
-      font-size: clamp(18px, 1vw, 20px);
+      font-size: clamp(18px, 2vw, 20px);
       line-height: 1.2;
       color: var(--color-black);
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     &--calculators {
@@ -90,7 +94,12 @@
     &--second,
     &--third,
     &--fourth {
-      padding: rem(175) rem(20) rem(25) rem(16);
+      padding: rem(152) rem(20) rem(25) rem(16);
+      justify-content: flex-start;
+
+      @include media(tablet) {
+        padding: rem(105) rem(10) rem(10);
+      }
 
       p {
         margin-bottom: 0;
@@ -105,8 +114,10 @@
 
   h3 {
     color: var(--color-gray-700);
+    font-family: var(--font-family-secondary);
     text-transform: uppercase;
     font-size: 18px;
+    line-height: 1.4;
     margin-bottom: 16px;
   }
 
@@ -125,9 +136,9 @@
     &::before {
       @include pseudo;
       @include contain-background;
-      width: 25px;
-      height: 25px;
-      right: 0;
+      width: 20px;
+      height: 20px;
+      right: 5px;
       top: 50%;
       transform: translateY(-50%);
       background-image: var(--arrow-left);

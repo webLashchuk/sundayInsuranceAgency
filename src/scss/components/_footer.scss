@@ -12,9 +12,9 @@
     h2 {
       font-family: var(--font-family-primary);
       color: var(--color-white);
-      font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 2.62rem);
-      text-transform: capitalize;
-      margin-bottom: rem(50);
+      font-size: clamp(1.75rem, 1.25rem + 2.2857vi, 42px);
+      text-transform: none;
+      margin-bottom: rem(35);
     }
   }
 
@@ -23,7 +23,17 @@
     align-items: flex-start;
     min-height: 375px;
     border-bottom: 1px solid var(--color-dark-500);
-    padding: rem(45);
+    padding: rem(30);
+    gap: 20px;
+
+    @include media(mobile-m) {
+      padding: 0;
+      padding-block: 10px 20px;
+    }
+
+    @include media(mobile-m) {
+      flex-direction: column-reverse;
+    }
   }
 
   label {
@@ -37,7 +47,7 @@
     background-color: var(--color-dark-500);
     color: var(--color-white);
     border-radius: calc(var(--radius-main) - 12px);
-    padding-block: 10px;
+    padding-block: 12px;
     font-size: 16px;
     padding-left: rem(32);
     margin-bottom: 15px;
@@ -50,9 +60,10 @@
   }
 
   .nav__list {
+    padding-top: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px rem(70);
+    gap: 10px rem(55);
   }
 
   &__bottom,
@@ -61,7 +72,7 @@
   }
 
   &__bottom {
-    padding: rem(25) rem(45);
+    padding: rem(20) rem(30);
 
     @include media(mobile-l) {
       flex-direction: column-reverse;
@@ -84,7 +95,7 @@
   }
 
   .copyright {
-    font-size: clamp(16px, 1vw, 18px);
+    font-size: clamp(16px, 2vw, 18px);
     font-weight: var(--fw-400);
 
     @include media(mobile-l) {

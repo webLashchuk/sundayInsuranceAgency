@@ -1,0 +1,28 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.list {
+  margin-bottom: rem(35);
+
+  li {
+    position: relative;
+    font-weight: var(--fw-500);
+    font-size: clamp(16px, 1vw, 18px);
+    padding-left: 36px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      @include pseudo;
+      filter: var(--filter-white);
+      width: 24px;
+      height: 24px;
+      background-image: var(--check);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

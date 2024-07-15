@@ -4,6 +4,10 @@
 .faq {
   width: 100%;
 
+  .section-header {
+    margin-bottom: rem(42);
+  }
+
   h2 {
     +p {
       color: var(--color-white);
@@ -23,11 +27,12 @@
     padding-bottom: 15px;
 
     &:not(:last-child) {
-      margin-bottom: rem(50);
+      margin-bottom: rem(42);
     }
   }
 
   p {
     color: var(--color-gray-300);
+    line-height: 1.08;
   }
 }

@@ -7,7 +7,16 @@
     gap: rem(40);
     background-color: var(--color-blue-900);
     border-radius: var(--radius-main);
-    padding: rem(65);
+    padding: rem(55);
+
+    @include media(tablet) {
+      padding: rem(25);
+    }
+
+    @include media(mobile-m) {
+      flex-direction: column-reverse;
+      padding: rem(15);
+    }
   }
 
   &__content {
@@ -21,11 +30,12 @@
     font-family: var(--font-family-primary);
     text-transform: capitalize;
     color: var(--color-white);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     +p {
-      margin-bottom: rem(50);
+      margin-bottom: rem(40);
       color: var(--color-white);
+      line-height: 1.2;
     }
   }
 
@@ -40,7 +50,11 @@
   }
 
   img {
-    aspect-ratio: 9/10;
+    aspect-ratio: 10/11;
     border-radius: var(--radius-main);
+  }
+
+  .btn {
+    font-size: clamp(18px, 2vw, 24px);
   }
 }

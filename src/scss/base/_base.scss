@@ -11,7 +11,7 @@ body {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-500);
   font-style: normal;
-  font-size: clamp(16px, 1vw, 18px);
+  font-size: clamp(16px, 2vw, 18px);
   color: var(--color-gray-600);
   background-color: var(--color-dark-900);
   font-optical-sizing: auto;
@@ -56,7 +56,7 @@ body {
   transition-duration: .3s;
   transition-timing-function: linear;
 
-  @include media(mobile-m) {
+  @include media(tablet) {
     max-width: 180px;
   }
 
@@ -75,7 +75,11 @@ img {
 }
 
 .section {
-  padding-block: rem(64);
+  padding-block: rem(60);
+
+  @include media(tablet) {
+    padding-block: rem(50);
+  }
 
   &--light {
     background-color: var(--color-white);
@@ -100,27 +104,6 @@ img {
 
     @include media(tablet) {
       color: inherit;
-    }
-  }
-}
-
-.list {
-  li {
-    position: relative;
-    margin-bottom: 20px;
-    font-weight: var(--fw-500);
-    font-size: clamp(16px, 1vw, 18px);
-    padding-left: 36px;
-
-    &::before {
-      @include pseudo;
-      filter: var(--filter-white);
-      width: 24px;
-      height: 24px;
-      background-image: var(--check);
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 }

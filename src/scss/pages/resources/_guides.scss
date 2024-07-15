@@ -2,11 +2,15 @@
 @use "../../utils/mixins/"as*;
 
 .guides {
-
   article {
     border-radius: var(--radius-main);
     color: var(--color-white);
     padding: rem(135) rem(50) rem(50);
+    height: 100%;
+
+    @include media(tablet) {
+      padding: rem(135) rem(25) rem(25);
+    }
 
     &::before {
       @include pseudo;
@@ -34,6 +38,10 @@
     display: inline-block;
     opacity: .7;
     margin-bottom: rem(95);
+
+    @include media(tablet) {
+      margin-bottom: rem(50);
+    }
   }
 
   .grid__item:first-child {

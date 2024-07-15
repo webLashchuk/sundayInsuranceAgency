@@ -3,15 +3,30 @@
 
 .contact {
   &__wrapper {
+    overflow: hidden;
     position: relative;
     background-color: var(--color-blue-900);
     border-radius: var(--radius-main);
-    padding: rem(50);
+    padding: rem(45);
+
+    @include media(tablet) {
+      padding: rem(45) rem(10);
+    }
 
     &::before {
       @include pseudo;
       inset: 0;
       background: var(--gradient-blue);
+    }
+  }
+
+  .section-header {
+    gap: 10px;
+
+    h2 {
+      +p {
+        line-height: 1.2;
+      }
     }
   }
 
@@ -23,7 +38,7 @@
   }
 
   .section-header {
-    margin-bottom: rem(50);
+    margin-bottom: rem(45);
   }
 
   p {
@@ -40,11 +55,21 @@
   &__form {
     @include flex-v-center;
     gap: 15px;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      align-self: flex-start;
+      align-items: flex-start;
+    }
   }
 
   label {
     display: block;
     width: 340px;
+
+    @include media(mobile-s) {
+      width: 260px;
+    }
   }
 
   input {
@@ -53,7 +78,7 @@
     color: var(--color-white);
     border-radius: calc(var(--radius-main) - 12px);
     padding-block: 10px;
-    font-size: clamp(16px, 1vw, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     padding-left: rem(32);
 
     &::placeholder {
@@ -64,6 +89,6 @@
   }
 
   .btn {
-    font-size: clamp(16px, 1vw, 24px);
+    font-size: clamp(16px, 2vw, 24px);
   }
 }

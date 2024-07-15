@@ -5,9 +5,15 @@
 <body class="page__body">
   <div class="site-container">
 
-    <include src="./html/_header.html" locals='{"page": "policy", "class": "header--secondary"}'></include>
+    <include src="./html/_header.html" locals='{"page": "policy", "class": ""}'></include>
 
     <main class="main main--top">
+
+      <include src="./html/policy/_hero-policy.html">
+        {
+        "title":"Privacy Policy"
+        }
+      </include>
 
       <include src="./html/policy/_policy.html"></include>
 

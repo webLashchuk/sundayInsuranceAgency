@@ -9,7 +9,7 @@
   z-index: 10;
   margin: 0 auto;
   width: 100%;
-  padding-block: rem(25);
+  padding-block: rem(18);
   transition-property: transform, padding;
   transition-duration: 0.15s;
 
@@ -18,7 +18,7 @@
   }
 
   &__inner {
-    max-width: 1340px;
+    max-width: 1370px;
     padding-inline: 15px;
     margin: 0 auto;
   }
