@@ -2,11 +2,14 @@
 @use "../utils/mixins/"as*;
 
 .article {
-
   &__hero-inner {
     @include flex-col;
     justify-content: center;
     min-height: calc(rem(560) - rem(100));
+
+    @include media(tablet) {
+      min-height: 460px;
+    }
 
     p {
       font-size: clamp(18px, 2vw, 24px);
@@ -40,16 +43,29 @@
     background-color: var(--color-white);
     border-radius: var(--radius-main);
     gap: rem(90);
-    padding: rem(16) rem(16) rem(16) rem(65);
+    padding: rem(15) rem(15) rem(15) rem(65);
+
+    @include media(tablet) {
+      flex-direction: column-reverse;
+      padding: rem(15) rem(15) rem(15) rem(15);
+      gap: rem(25);
+    }
   }
 
   &__content {
     max-width: 490px;
+    width: 100%;
     margin: auto 0;
+
+    @include media(tablet) {
+      max-width: 100%;
+    }
 
     h2 {
       font-size: clamp(1.75rem, 1.25rem + 2.2857vw, 56px);
+      font-family: var(--font-family-primary);
       color: var(--color-dark-500);
+      margin-bottom: 25px;
       text-transform: capitalize;
       line-height: 1;
 
@@ -64,8 +80,18 @@
     max-width: 655px;
     width: 100%;
 
+    @include media(tablet) {
+      max-width: 100%;
+    }
+
     img {
       aspect-ratio: 95/100;
+    }
+
+    @include media(tablet) {
+      img {
+        aspect-ratio: 16/7;
+      }
     }
   }
 
@@ -86,6 +112,10 @@
 
     img {
       aspect-ratio: 24/5;
+
+      @include media(mobile-l) {
+        aspect-ratio: 24/10;
+      }
     }
   }
 
